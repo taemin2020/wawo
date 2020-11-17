@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="wawo.prototype.moding.dao.MainDAO"><!--namespace를 통해 MainDAO와 연결합니다. -->
+  		
+  <select id="selectUsers" parameterType="wawo.prototype.moding.dto.MainDTO"
+resultType="wawo.prototype.moding.dto.MainDTO"><!-- selectUsers()메서드를 호출하면 실행할 SELECT문이며, 
+						MainDTO 객체를 파라미터로 받아, MainDTO객체를 반환합니다.-->
+  	SELECT seq
+         , NAME
+	     , ip
+    FROM prototype
+
+  </select>
+
+</mapper>
